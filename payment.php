@@ -2,7 +2,7 @@
 include 'inc/header.php';
 ?>
 <?php 
-if(isset($_GET['orderid']) && $_GET['orderid'] == 'order'){
+if(isset($_GET['orderid']) && $_GET['orderid'] == 'order' && isset($_GET['MaDC'])){
   $customer_id = Session::get('customer_id');
   $MaDC = $_GET['MaDC'];
   $insertOrder = $ct->insertOrder($customer_id,$MaDC);
@@ -187,7 +187,7 @@ if(isset($_GET['orderid']) && $_GET['orderid'] == 'order'){
 </div>
   </div>
 
-<center><a href="?orderid=order&madc=<?php echo $_GET['MaDC'] ?>" class="order">Đặt hàng</a></center><br>
+<center><a href="?orderid=order&MaDC=<?php echo $_GET['MaDC'] ?>" class="order">Đặt hàng</a></center><br>
 
 </div>
 

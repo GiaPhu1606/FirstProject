@@ -166,10 +166,10 @@
  		$time = mysqli_real_escape_string($this->db->link, $time);
         $time_od = mysqli_real_escape_string($this->db->link, $time_od);
  		$mskh = mysqli_real_escape_string($this->db->link, $mskh);
-        
  		
- 		$query = "UPDATE dathang SET TrangThaiDH = '1',NgayGH = '$time_od' WHERE SoDonDH = '$id' AND NgayDH = '$time' AND MSKH = '$mskh'";
+ 		$query = "UPDATE dathang SET TrangThaiDH = '1', NgayGH = '$time_od' WHERE SoDonDH = '$id' AND NgayDH = '$time' AND MSKH = '$mskh'";
  		$result = $this->db->update($query);
+        
  		if($result){
  			$msg = "<span class='success' style='color: green; font-size: 18px;'>Cập nhật trạng thái đơn hàng thành công</span>";
  			return $msg;

@@ -1,4 +1,4 @@
-﻿<?php include 'inc/header.php';?>
+﻿d<?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
 <?php
 $filepath = realpath(dirname(__FILE__));
@@ -87,12 +87,12 @@ if(!isset($_GET['id'])){
 								
 
 									<?php
-									$date = date('j-m-Y');
+									$date = date('Y-m-j');
 									$newdate = strtotime ( '+3 day' , strtotime ( $date ) ) ;
-									$newdate = date ( 'j-m-Y' , $newdate );
+									$newdate = date ( 'Y-m-j' , $newdate );
 									if ($result['TrangThaiDH'] == '0') {	
 										?>
-										<a href="?shiftid=<?php echo $result['SoDonDH'] ?>&time=<?php echo $result['NgayDH'] ?>&time_od= <?php echo $newdate?>&mskh=<?php echo $result['MSKH']?>">Duyệt</a>
+										<a href="?shiftid=<?php echo $result['SoDonDH'] ?>&time=<?php echo $result['NgayDH'] ?>&time_od= <?php echo $newdate ?>&mskh=<?php echo $result['MSKH']?>">Duyệt</a>
 										<?php 
 									}elseif($result['TrangThaiDH'] == '1'){
 										?> 

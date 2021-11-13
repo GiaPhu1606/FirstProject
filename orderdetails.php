@@ -34,7 +34,7 @@ if(isset($_GET['comfirmid'])){
   <div class="content">
    <div class="cartoption">      
       <div class="cartpage">
-         <h2 style=" width: 500px;">Chi tiết đặt hàng</h2>
+         <h2 style=" width: 500px;">Đơn hàng</h2>
          <?php 
 
          if (isset($shifted_comfirm)){
