@@ -57,20 +57,6 @@
  			}
             }
  		}
- 	
-    // public function update_quantity_product($SoLuong,$MaHang,$idgiohang){
-    //     $SoLuong = $this->fm->validation($SoLuong);
-    //     $SoLuong = mysqli_real_escape_string($this->db->link, $SoLuong);
-    //     $MaHang = mysqli_real_escape_string($this->db->link, $MaHang);
-    //     $sMaHang = session_id();
-    //     $query = "SELECT hanghoa*,giohang.SoLuong FROM hanghoa LEFT JOIN giohang ON hanghoa.MaHang = '$MaHang' AND giohang.idgiohang = '$idgiohang' ";
-    //     $result = $this->db->select($query);
-    //     $SoLuong = $result['SoLuong'];
-    //     $TonKho = $SoLuongHang = $result['SoLuongHang'] - $SoLuong;
-    //     $query_quantity = "UPDATE hanghoa SET SoLuongHang = '$TonKho' WHERE MaHang = '$MaHang' ";
-    //     $result_quantity = $this->db->update($query_quantity);
-
-    // }
  	public function get_product_cart(){
  		$sId = session_id();
  		$query = "SELECT * FROM giohang WHERE sid ='$sId' ";
@@ -157,9 +143,12 @@
  	}
 
  	public function get_inbox_cart(){
- 		$query = "SELECT * FROM dathang order by NgayDH";
+ 		$query = "SELECT dathang.*,diachikh.DiaChi,khachhang.HoTenKH FROM dathang LEFT JOIN diachikh ON dathang.DiaChiGH = diachikh.MaDC LEFT JOIN khachhang ON dathang.MSKH = khachhang.MSKH order by NgayDH";
+
  		$get_inbox_cart = $this->db->select($query);
+
  		return $get_inbox_cart;
+
  	}
  	public function shifted($id,$time,$time_od,$mskh){
  		$id = mysqli_real_escape_string($this->db->link, $id);

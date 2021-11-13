@@ -1,4 +1,4 @@
-﻿d<?php include 'inc/header.php';?>
+﻿<?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
 <?php
 $filepath = realpath(dirname(__FILE__));
@@ -50,8 +50,8 @@ if(!isset($_GET['id'])){
 					<tr>
 						<th>STT</th>
 						<th>Ngày đặt hàng</th>
-						<th>Mã khách hàng</th>
-						<th>Mã địa chỉ</th>
+						<th>Khách hàng</th>
+						<th>Địa chỉ giao hàng</th>
 						<th>Trạng thái</th>
 						<th>Chi tiết đơn hàng</th>
 						<th>Xử lí đơn hàng</th>
@@ -70,9 +70,8 @@ if(!isset($_GET['id'])){
 							<tr class="odd gradeX">
 								<td><?php echo $i; ?></td>
 								<td><?php echo $fm->formatDate($result['NgayDH']) ?></td>
-
-								<td><?php echo $result['MSKH'] ?></td>
-								<td><?php echo $result['DiaChiGH'] ?></td>
+								<td><?php echo $result['HoTenKH'] ?></td>
+								<td><?php echo $result['DiaChi'] ?></td>
 								<td><?php
 									if($result['TrangThaiDH'] == 1){
 									echo 'Đã duyệt';
@@ -82,7 +81,7 @@ if(!isset($_GET['id'])){
 									echo 'Đã nhận hàng';
 									} ?>
 								</td>
-								<td><a href="orderdetails.php?MSKH=<?php echo $result['MSKH'] ?>&SodonDH= <?php echo $result['SoDonDH']?>">Xem</a></td>
+								<td><a href="orderdetails.php?MSKH=<?php echo $result['MSKH'] ?>&SodonDH= <?php echo $result['SoDonDH']?>&MaDC=<?php echo $result['DiaChiGH'] ?>">Xem</a></td>
 								<td>
 								
 
@@ -97,6 +96,7 @@ if(!isset($_GET['id'])){
 									}elseif($result['TrangThaiDH'] == '1'){
 										?> 
 										<?php
+
 										echo 'Đang giao';
 										?>
 										<?php 

@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
                         <td>
                         </td>
                         <td>
-                            <input type="text" name="TenHH" placeholder="Nhập tên hàng hóa" class="medium" />
+                            <input type="text" autocomplete="off" name="TenHH" placeholder="Nhập tên hàng hóa" class="medium" />
                         </td>
                     </tr>
                     <tr>
@@ -70,7 +70,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
                             <label>Số lượng hàng</label>
                         </td>
                         <td>
-                            <input type="text" name="SoLuongHang" placeholder="Nhập số lượng " class="medium" />
+                            <input type="text" autocomplete="off" name="SoLuongHang" placeholder="Nhập số lượng " class="medium" />
                         </td>
                     </tr>
                     <tr>
@@ -78,7 +78,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
                             <label>Giá</label>
                         </td>
                         <td>
-                            <input type="text" name="Gia" placeholder="Nhập giá " class="medium" />
+                            <input type="text" autocomplete="off" name="Gia" placeholder="Nhập giá " class="medium" />
                         </td>
                     </tr>
                     <tr>

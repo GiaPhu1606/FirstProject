@@ -57,7 +57,7 @@ header("Cache-Control: max-age=2592000");
 			<div class="header_top_right">
 				<div class="search_box">
 					<form action="search.php" method="POST">
-						<input type="text" placeholder="Tìm kiếm sản phẩm" name="tukhoa"><input type="submit" name="search_pd" value="Tìm kiếm">
+						<input type="text" autocomplete="off" placeholder="Tìm kiếm sản phẩm" name="tukhoa"><input type="submit" name="search_pd" value="Tìm kiếm">
 					</form>
 				</div>
 				<div class="shopping_cart">

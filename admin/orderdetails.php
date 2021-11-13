@@ -15,6 +15,15 @@ if(!isset($_GET['MSKH']) || $_GET['MSKH'] == NULL){
 
 }
 ?>
+<?php  
+$cs = new customer();
+if(!isset($_GET['MaDC']) || $_GET['MaDC'] == NULL){
+    echo "<script>window.location ='order.php' </script>";
+}else{
+    $iddc = $_GET['MaDC'];
+
+}
+?>
 <?php
 $fm = new Format();  
 $ct = new cart();
@@ -101,19 +110,13 @@ if(!isset($_GET['SodonDH']) || $_GET['SodonDH'] == NULL){
                                 <td>Địa chỉ giao hàng</td>
                                 <td>:</td>
                                 <td>
-                                 <?php
-                
-                                    $id = Session::get('customer_id');
-                                     $get_addrcustomer = $cs->show_addrcustomer($id);
+                                <?php
+                                     $get_addrcustomer = $cs->show_addrorder($iddc,$id);
                                      if($get_addrcustomer ){
-                                      
-
                                      while($result_addr = $get_addrcustomer->fetch_assoc() ){
-                     
-                     
-                     ?>
+                                ?>
                     
-                     <?php echo  $result_addr['MaDC'].' '.':'.' '.$result_addr['DiaChi'].'<br>'?>
+                     <?php echo  $result_addr['DiaChi']?>
                     
                      <?php 
                   }

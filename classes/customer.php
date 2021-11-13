@@ -104,6 +104,11 @@
               $result = $this->db->select($query);
               return $result;
        }
+       public function show_addrorder($iddc,$id){
+        $query = "SELECT dathang.*, diachikh.DiaChi FROM dathang LEFT JOIN diachikh ON dathang.DiaChiGH = diachikh.MaDC AND dathang.MSKH = diachikh.MSKH WHERE dathang.MSKH = '$id' AND dathang.DiaChiGH = '$iddc' limit 1";
+              $result = $this->db->select($query);
+              return $result;
+       }
         
        
  	public function show_customer_order($id){

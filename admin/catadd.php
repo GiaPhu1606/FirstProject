@@ -25,7 +25,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             <table class="form">					
                 <tr>
                     <td>
-                        <input type="text" name="TenLoaiHang" placeholder="Nhập loại hàng" class="medium" />
+                        <input type="text" autocomplete="off" name="TenLoaiHang" placeholder="Nhập loại hàng" class="medium" />
                     </td>
                 </tr>
                 <tr> 

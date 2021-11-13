@@ -37,8 +37,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])){
 			} 
 			?>
 			<form action="" method="POST" >
-				<input type="text" name="Username" class="field" placeholder="Nhập tên đăng nhập...">
-				<input  type="password" name="Password" class="field" placeholder="Nhập mật khẩu...">
+				<input type="text" autocomplete="off" name="Username" class="field" placeholder="Nhập tên đăng nhập...">
+				<input  type="password" autocomplete="off" name="Password" class="field" placeholder="Nhập mật khẩu...">
 				<div class="buttons"><div><input type="submit" name="login" class="grey" value="Đăng nhập" style="font-size: 19px; background: inherit"></div></div>
 			</form>
 		</div>
@@ -59,37 +59,37 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])){
 						<tr>
 							<td>
 								<div>
-									<input type="text" name="name" placeholder="Nhập họ tên..." >
+									<input type="text" autocomplete="off" name="name" placeholder="Nhập họ tên..." >
 								</div>
 								
 								<div>
-									<input type="text" name="company" placeholder="Nhập tên công ty...(Nếu không có ghi 'Không')">
+									<input type="text" autocomplete="off" name="company" placeholder="Nhập tên công ty...(Nếu không có ghi 'Không')">
 								</div>
 
 								
 								<div>
-									<input type="text" name="phone" placeholder="Nhập số điện thoại...">
+									<input type="text" autocomplete="off" name="phone" placeholder="Nhập số điện thoại...">
 								</div>
 								
 								<div>
-									<input type="text" name="fax" placeholder="Nhập số fax...">
+									<input type="text" autocomplete="off" name="fax" placeholder="Nhập số fax...">
 								</div>
 							</td>
 
 							<td>
 								<div>
-									<input type="text" name="username" placeholder="Nhập tên đăng nhập...">
+									<input type="text" autocomplete="off" name="username" placeholder="Nhập tên đăng nhập...">
 								</div>
 
 								<div>
-									<input type="text" name="password" placeholder="Nhập mật khẩu...">
+									<input type="text" autocomplete="off" name="password" placeholder="Nhập mật khẩu...">
 								</div>
 								<div>
-									<input type="text" name="job" placeholder="Nhập nghề nghiệp...">
+									<input type="text" autocomplete="off" name="job" placeholder="Nhập nghề nghiệp...">
 								</div> 
 								
 								<div>
-									<input type="text" name="email" placeholder="Nhập email...">
+									<input type="text" autocomplete="off" name="email" placeholder="Nhập email...">
 								</div>
 								
 

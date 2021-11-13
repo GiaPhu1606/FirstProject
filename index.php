@@ -4,7 +4,6 @@ include 'inc/slider.php';
 ?>
 
 <div class="main">
-	
 	<div class="content">
 		<div class="content_top">
 			<div class="heading">

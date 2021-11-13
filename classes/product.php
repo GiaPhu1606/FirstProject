@@ -129,7 +129,7 @@
  	}
 			//Kết thúc backend
  	public function getproduct_feathered(){
- 		$query = "SELECT hanghoa.*,hinhhanghoa.TenHinh FROM hanghoa LEFT JOIN hinhhanghoa ON hanghoa.MSHH = hinhhanghoa.MSHH WHERE type = '0' LIMIT 4";
+ 		$query = "SELECT hanghoa.*,hinhhanghoa.TenHinh FROM hanghoa LEFT JOIN hinhhanghoa ON hanghoa.MSHH = hinhhanghoa.MSHH WHERE type = '1' LIMIT 4";
  		$result = $this->db->select($query);
  		return $result;
  	}

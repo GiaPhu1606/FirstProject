@@ -51,7 +51,7 @@ if(isset($_GET['MSHH'])){
 								<td><?php echo $result['SoLuongHang'] ?></td>
 								<td><?php echo $result['TenLoaiHang'] ?></td>
 								<td> <?php 
-								if($result['type'] == 0){
+								if($result['type'] == 1){
 									echo 'Nổi bật';
 								}else { echo 'Không nổi bật';
 							}

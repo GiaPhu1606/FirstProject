@@ -185,12 +185,18 @@ if(isset($_GET['orderid']) && $_GET['orderid'] == 'order' && isset($_GET['MaDC']
 
 </table>
 </div>
-  </div>
+<?php  
+if(isset($_GET['MaDC'])){
+   $MaDC = $_GET['MaDC'];
+   ?>
+</div>
 
 <center><a href="?orderid=order&MaDC=<?php echo $_GET['MaDC'] ?>" class="order">Đặt hàng</a></center><br>
 
 </div>
-
+<?php
+}
+?>
 
 </form>
 <?php 
