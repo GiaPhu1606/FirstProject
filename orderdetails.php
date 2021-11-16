@@ -7,14 +7,6 @@
  if($login_check == false){
    header('Location:login.php');
 }
-$ct = new cart();
-if(isset($_GET['comfirmid'])){
-   $id = $_GET['comfirmid'];
-   $time = $_GET['time'];
-   $shd = $_GET['shd'];
-   $shifted_comfirm = $ct->shifted_comfirm($id,$time,$shd);
-   header('Location:orderdetails.php');
-}
 ?>
 <style>
    .payment {
@@ -43,12 +35,11 @@ if(isset($_GET['comfirmid'])){
          ?>
          <table class="tblone">
             <tr>
-               <th width="5%">ID</th>
+               <th width="10%">ID</th>
                <th width="25%">Ngày đặt</th>
-               <th width="20%">Dự kiến giao hàng</th>
+               <th width="25%">Dự kiến giao hàng</th>
                <th width="20%">Chi tiết đơn hàng</th>
-               <th width="15%">Trạng thái</th>
-               <th width="15%">Thao tác</th>
+               <th width="20%">Trạng thái</th>
                
             </tr>
             <?php 
@@ -78,33 +69,15 @@ if(isset($_GET['comfirmid'])){
                         if($result['TrangThaiDH'] == '0'){
                            echo 'Đang xử lí';
                         }elseif($result['TrangThaiDH'] == '1'){
-                           ?> 
-                           <span>Đang giao</span>
-                           <?php 
+                            
+                           echo 'Đang vận chuyển';
+ 
                         }elseif($result['TrangThaiDH'] == '2') {
                            echo 'Đã nhận';
                         }
                         ?>
 
                      </td>
-                     <?php
-                     if($result['TrangThaiDH'] == '0'){
-                        ?>
-                        <td><?php echo 'N/A';?></td>
-                        <?php
-                     }elseif($result['TrangThaiDH']== '1'){
-
-                        ?>
-                        <td><a href="?comfirmid=<?php echo $customer_id ?>&time=<?php echo $result['NgayDH']?>&shd=<?php echo $result['SoDonDH']?>">Đã nhận</a></td>
-                        <?php
-                     }elseif($result['TrangThaiDH']== '2'){
-                        ?>
-                        <td><?php echo 'Đã nhận'; ?></td>
-                        <?php 
-                     }
-                     ?>
-
-                     
                   </tr>
                   
                   <?php 

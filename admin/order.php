@@ -27,6 +27,14 @@ if(isset($_GET['delid'])){
 if(!isset($_GET['id'])){
 	echo "<meta http-equiv='refresh' content='0;URL=?id=live'>";
 }
+$ct = new cart();
+if(isset($_GET['comfirmid'])){
+   $id = $_GET['comfirmid'];
+   $time = $_GET['time'];
+   $mskh = $_GET['mskh'];
+   $shifted_comfirm = $ct->shifted_comfirm($id,$time,$mskh);
+   header('Location:orderdetails.php');
+}
 ?>
 
 
@@ -95,10 +103,7 @@ if(!isset($_GET['id'])){
 										<?php 
 									}elseif($result['TrangThaiDH'] == '1'){
 										?> 
-										<?php
-
-										echo 'Đang giao';
-										?>
+										<a href="?comfirmid=<?php echo $result['SoDonDH'] ?>&time=<?php echo $result['NgayDH']?>&mskh=<?php echo $result['MSKH'] ?>">Đã nhận</a>
 										<?php 
 									}elseif($result['TrangThaiDH'] == '2'){
 										?>

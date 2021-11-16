@@ -7,7 +7,7 @@
 
  <?php 
  
- class cart
+ class cart 
  {
  	private $db;
  	private $fm;
@@ -182,12 +182,12 @@
  			return $msg;
  		}
  	}
- 	public function shifted_comfirm($id,$time,$shd){
+ 	public function shifted_comfirm($id,$time,$mskh){
  		$id = mysqli_real_escape_string($this->db->link, $id);
  		$time = mysqli_real_escape_string($this->db->link, $time);
  		$price = mysqli_real_escape_string($this->db->link, $price);
- 		$shd = mysqli_real_escape_string($this->db->link, $shd);
- 		$query = "UPDATE dathang SET TrangThaiDH ='2' WHERE MSKH = '$id' AND  SoDonDH = '$shd' AND NgayDH = '$time'";
+ 		$mskh = mysqli_real_escape_string($this->db->link, $mskh);
+ 		$query = "UPDATE dathang SET TrangThaiDH ='2' WHERE SoDonDH = '$id'  AND NgayDH = '$time' AND  MSKH = '$mskh'";
  		$result = $this->db->update($query);
  		
  	}

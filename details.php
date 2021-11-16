@@ -30,10 +30,9 @@ if(isset($_POST['binhluan_submit'])){
 							<img src="admin/uploads/<?php echo $result_details['TenHinh'] ?>"  />
 						</div>
 						<div class="desc span_3_of_2">
-							<h2><?php echo $result_details['TenHH'] ?> </h2>
-							<p><?php echo  $fm->textShorten($result_details['ChiTietHH'],100)  ?></p>					
+							<h2><?php echo $result_details['TenHH'] ?> </h2>				
 							<div class="price">
-								<p>Giá: <span><?php echo $fm->format_currency($result_details['Gia']).' '.'VNĐ' ?></span></p>
+								<p>Giá: <span><?php echo $fm->format_currency($result_details['Gia']).' '.'VNĐ'.'/Kg' ?></span></p>
 								<p>Loại hàng hóa: <span><?php echo $result_details['TenLoaiHang'] ?></span></p>
 								
 							</div>
@@ -53,7 +52,7 @@ if(isset($_POST['binhluan_submit'])){
 						</div>
 						<div class="product-desc">
 							<h2>Chi tiết hàng hóa</h2>
-							<p><?php echo  $fm->textShorten($result_details['ChiTietHH'],100)  ?></p>
+							<p><?php echo $result_details['ChiTietHH']  ?></p>
 						</div>
 						
 					</div>

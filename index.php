@@ -22,7 +22,7 @@ include 'inc/slider.php';
 						<a href="details.php"><img src="admin/uploads/<?php echo $result['TenHinh'] ?>" /></a>
 						<h2> <?php echo $result['TenHH'] ?> </h2>
 						<p><?php echo $fm->textShorten($result['ChiTietHH'],50) ?></p>
-						<p><span class="price"><?php echo $fm->format_currency($result['Gia']).' '.'VNĐ' ?></span></p>
+						<p><span class="price"><?php echo $fm->format_currency($result['Gia']).' '.'VNĐ'.'/Kg' ?></span></p>
 						<div class="button"><span><a href="details.php?MSHH=<?php echo $result['MSHH'] ?>" class="details">Chi tiết</a></span></div>
 					</div>
 					<?php 
@@ -47,7 +47,7 @@ include 'inc/slider.php';
 						<a href="details.php"><img src="admin/uploads/<?php echo $result_new['TenHinh'] ?>" /></a>
 						<h2> <?php echo $result_new['TenHH'] ?> </h2>
 						<p><?php echo $fm->textShorten($result_new['ChiTietHH'],50) ?></p>
-						<p><span class="price"><?php echo $fm->format_currency($result_new['Gia']).' '.'VNĐ' ?></span></p>
+						<p><span class="price"><?php echo $fm->format_currency($result_new['Gia']).' '.'VNĐ'.'/Kg' ?></span></p>
 						<div class="button"><span><a href="details.php?MSHH=<?php echo $result_new['MSHH'] ?>" class="details">Chi tiết</a></span></div>
 					</div>
 					

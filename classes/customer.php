@@ -98,7 +98,7 @@
  			}
  		}
  	}
- 	
+ 	 
        public function show_customer($id){
         $query = "SELECT * FROM khachhang WHERE MSKH = '$id'";
               $result = $this->db->select($query);

@@ -23,11 +23,10 @@ if(isset($_GET['MSHH'])){
 			<table class="data display datatable" id="example">
 				<thead>
 					<tr>
-						<th>Mã hàng hóa</th>
+						<th>ID</th>
 						<th>Tên hàng hóa</th>
 						<th>Giá</th>
 						<th>Hình ảnh</th>
-						<th>Chi tiết hàng hóa</th>
 						<th>Số lượng</th>
 						<th>Loại hàng hóa</th>
 						<th>Trạng thái</th>
@@ -47,7 +46,6 @@ if(isset($_GET['MSHH'])){
 								<td><?php echo $result['TenHH'] ?></td>
 								<td><?php echo $fm->format_currency($result['Gia']).' '.'VNĐ' ?></td>
 								<td> <img src="uploads/<?php echo $result['TenHinh'] ?>" width = "80"></td>
-								<td><?php echo $fm->textShorten($result['ChiTietHH'],50)  ?></td>
 								<td><?php echo $result['SoLuongHang'] ?></td>
 								<td><?php echo $result['TenLoaiHang'] ?></td>
 								<td> <?php 

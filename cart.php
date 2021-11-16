@@ -12,9 +12,6 @@
     $MaHang = $_POST['MSHH'];
  	$SoLuong = $_POST['SoLuong'];
  	$updateCart = $ct->update_cart($SoLuong,$idgiohang);
-   //$update_quantity_pro = $ct->update_quantity_product($SoLuong,$MaHang,$idgiohang);
-
-    
  }
  ?>
  <?php 

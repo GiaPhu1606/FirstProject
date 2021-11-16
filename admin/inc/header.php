@@ -12,7 +12,7 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Admin</title>
+    <title>Quản lí</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/text.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/grid.css" media="screen" />
@@ -45,9 +45,10 @@
         <div class="grid_12 header-repeat">
             <div id="branding">
                 <div class="floatleft logo">
-                    <img src="img/livelogo.png" alt="Logo" />
+                    <img src="img/logo_1.png" alt="Logo" />
 				</div>
 				<div class="floatleft middle">
+                    <h2 style="color: white; font-size: 20px;">Fuka Store</h2>
 				</div>
                 <div class="floatright">
                     <div class="floatleft">
